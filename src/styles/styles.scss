@@ -1,0 +1,1562 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  body {
+	min-width: 320px;
+	font-family: sans-serif;
+	background: #fff;
+	height: 100vh;
+  }
+  
+  #scrollclass {
+	position: fixed;
+	width: 100%;
+	height: 5px;
+	top: 0%;
+	display: grid;
+	place-items: center;
+	box-shadow: 0 0 10px;
+  }
+  
+  .nav {
+	display: inline-flex;
+	position: relative;
+	width: 100%;
+	height: auto;
+	left: 0px;
+	top: 0px;
+	background: #FFFFFF;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.nav {
+	  display: inline-flex;
+	}
+  }
+  
+  .navtoggle {
+	display: inline-flex;
+	position: relative;
+	width: 100%;
+	font-size: 2rem;
+	cursor: pointer;
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+	color: #08a6e4;
+	font-family: Raleway;
+  }
+  
+  .nav .navtoggle {
+	.icon-menu {
+	  position: absolute;
+	  margin-left: 100%;
+	  width: 20px;
+	  height: 20px;
+	  margin-top: 0.7rem;
+	}
+  
+	.icon-cross {
+	  position: absolute;
+	  margin-left: 100%;
+	  width: 20px;
+	  height: 20px;
+	  margin-top: 0.8rem;
+	  display: none;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.nav .navtoggle .icon-cross {
+	  display: none;
+	}
+  }
+  
+  .checkboxnav {
+	display: none;
+  }
+  
+  .ull {
+	display: block;
+	flex-direction: column;
+	gap: 4rem;
+	align-items: center;
+	margin: 1rem;
+	list-style: none;
+	margin-left: 2rem;
+  
+	li {
+	  display: none;
+	  padding-bottom: 2ex;
+  
+	  a {
+		color: black;
+		font-family: sans-serif;
+		text-decoration: none;
+		font-size: 1.2rem;
+	  }
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.ull {
+	  position: relative;
+	  display: flex;
+	  flex-direction: row;
+	  padding-left: 20%;
+	  gap: 8rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.ull li {
+	  display: inline;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.ull li a {
+	  display: inline-flex;
+	  position: absolute;
+	  margin-left: 0%;
+	  color: black;
+	  font-family: sans-serif;
+	  text-decoration: none;
+	  font-size: 1.4rem;
+	}
+  }
+  
+  .checkboxnav:checked ~ ul.ull li {
+	display: block;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	#checkboxnav:checked ~ .navtoggle .icon-cross {
+	  display: none;
+	}
+  }
+  
+  #checkboxnav:checked ~ .navtoggle .icon-menu {
+	display: none;
+  }
+  
+  .checkboxnav:checked ~ .navtoggle .icon-cross {
+	display: inline;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.navtoggle .icon-menu {
+	  display: none;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	#checkboxnav:checked ~ .navtoggle .icon-menu {
+	  display: none;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.checkboxnav:checked ~ ul.ull li {
+	  display: block;
+	}
+  }
+  
+  .sell {
+	position: static;
+	font-size: 1rem;
+	margin-top: 2.5rem;
+	text-align: center;
+	color: #000000;
+	font-style: normal;
+	font-family: 'Raleway';
+	margin-left: 4rem;
+	margin-right: 4rem;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.sell {
+	  margin-top: 7rem;
+	}
+  }
+  
+  .selle {
+	text-align: center;
+  }
+  
+  .open {
+	position: relative;
+	margin-top: 1.25rem;
+	text-align: center;
+  }
+  
+  .opend {
+	margin-top: 1.25rem;
+	width: 300px;
+	height: 60px;
+	background: #08A6E4;
+	box-shadow: 5px 10px 14px rgba(255, 255, 255, 0.29);
+	border-radius: 40px;
+	color: #FFFFFF;
+  }
+  
+  .image {
+	margin-top: 1.25rem;
+  }
+  
+  .imagen {
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+  }
+  
+  .benefits {
+	position: relative;
+	font-size: 2rem;
+	margin-top: 1.25rem;
+	text-align: center;
+	color: #000000;
+	font-style: normal;
+	font-family: 'Raleway';
+  
+	p {
+	  margin-left: 4rem;
+	  margin-right: 4rem;
+	}
+  }
+  
+  .figus {
+	align-items: center;
+	position: relative;
+  
+	.circle {
+	  position: relative;
+	  margin: auto;
+	  margin-top: 3rem;
+	  height: 100px;
+	  width: 100px;
+	  background: #FB3B64;
+	  -moz-border-radius: 50px;
+	  -webkit-border-radius: 50px;
+	  border-radius: 50px;
+  
+	  .person {
+		position: absolute;
+		margin-top: 5%;
+		margin-left: 45%;
+		color: #000000;
+		width: 70px;
+	  }
+	}
+  
+	.cien {
+	  display: block;
+	  text-align: center;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 2rem;
+	  font-weight: 1000;
+	  margin-top: 2rem;
+	  letter-spacing: 8px;
+	}
+  
+	.daily {
+	  display: block;
+	  text-align: center;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 2rem;
+	  font-weight: 200;
+	  margin-top: 1.25rem;
+	  color: #A5A5A5;
+	  letter-spacing: -1.5px;
+	}
+  
+	.circleb {
+	  position: relative;
+	  margin: auto;
+	  margin-top: 3rem;
+	  height: 100px;
+	  width: 100px;
+	  background: #08A6E4;
+	  -moz-border-radius: 50px;
+	  -webkit-border-radius: 50px;
+	  border-radius: 50px;
+  
+	  .eye {
+		position: absolute;
+		margin-top: 30%;
+		margin-left: 45%;
+		color: #000000;
+		width: 90px;
+	  }
+	}
+  
+	.dosmi {
+	  text-align: center;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 2rem;
+	  margin-top: 1rem;
+	  font-weight: 1000;
+	  margin-top: 2rem;
+	  letter-spacing: 8px;
+	}
+  
+	.seen {
+	  text-align: center;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 2rem;
+	  font-weight: 200;
+	  margin-top: 1.25rem;
+	  color: #A5A5A5;
+	  letter-spacing: -1.5px;
+	}
+  
+	.circleg {
+	  position: relative;
+	  margin: auto;
+	  margin-top: 3rem;
+	  height: 100px;
+	  width: 100px;
+	  background: #55DFB4;
+	  -moz-border-radius: 50px;
+	  -webkit-border-radius: 50px;
+	  border-radius: 50px;
+  
+	  .catalogo {
+		position: absolute;
+		margin-top: 15%;
+		margin-left: 45%;
+		color: #000000;
+		width: 70px;
+	  }
+	}
+  
+	.diez {
+	  text-align: center;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 2rem;
+	  margin-top: 1rem;
+	  font-weight: 1000;
+	  margin-top: 2rem;
+	  letter-spacing: 8px;
+	}
+  
+	.added {
+	  text-align: center;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 2rem;
+	  font-weight: 200;
+	  margin-top: 1.25rem;
+	  color: #A5A5A5;
+	  letter-spacing: -1.5px;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus {
+	  margin-left: 20%;
+	  margin-right: 25%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus .circle {
+	  margin: auto;
+	  margin-top: 0.5rem;
+	  position: absolute;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus .cien {
+	  position: absolute;
+	  margin-top: 8.5rem;
+	  margin-left: -1rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus .daily {
+	  position: absolute;
+	  margin-top: 11.5rem;
+	  margin-left: -1rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus .circleb {
+	  position: relative;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus .circleg {
+	  position: absolute;
+	  left: 90%;
+	  margin-top: -16rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus .diez {
+	  position: absolute;
+	  left: 90%;
+	  margin-top: -8rem;
+	  margin-left: -1rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.figus .added {
+	  position: absolute;
+	  left: 90%;
+	  margin-top: -4.5rem;
+	}
+  }
+  
+  .container {
+	margin-top: 50px;
+	position: relative;
+	height: 1330.66px;
+	left: 0px;
+	right: 0px;
+	background: #ededed;
+  
+	.primero {
+	  position: absolute;
+	  height: 350px;
+	  left: 8%;
+	  right: 8%;
+	  background: #ffffff;
+	  border: 1px solid #E8E9ED;
+	  border-radius: 5px;
+	  box-sizing: border-box;
+	  margin-top: 3rem;
+  
+	  .circulor {
+		margin-left: 50%;
+		position: absolute;
+		margin-top: 1.5rem;
+		height: 100px;
+		width: 100px;
+		background: #FB3B64;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+  
+		.pc {
+		  position: absolute;
+		  margin-top: 13%;
+		  margin-left: -110%;
+		}
+	  }
+  
+	  .be {
+		position: absolute;
+		font-size: 2.2rem;
+		margin-top: 11rem;
+		color: #000000;
+		font-style: normal;
+		font-family: 'Raleway';
+		margin-left: 1.3rem;
+	  }
+  
+	  .lorem {
+		position: absolute;
+		font-size: 1rem;
+		margin-top: 15rem;
+		color: #000000;
+		font-style: normal;
+		font-family: 'Raleway';
+		margin-left: 1.3rem;
+		margin-right: 1.3rem;
+	  }
+	}
+  
+	.segundo {
+	  position: absolute;
+	  height: 400px;
+	  left: 8%;
+	  right: 8%;
+	  background: #ffffff;
+	  border: 1px solid #E8E9ED;
+	  border-radius: 5px;
+	  box-sizing: border-box;
+	  margin-top: 27rem;
+  
+	  .circuloa {
+		margin-left: 33%;
+		position: absolute;
+		margin-top: 1rem;
+		height: 150px;
+		width: 150px;
+		background: #08A6E4;
+		-moz-border-radius: 75px;
+		-webkit-border-radius: 75px;
+		border-radius: 75px;
+  
+		.iphone {
+		  position: absolute;
+		  margin-top: 11%;
+		  margin-left: -1%;
+		}
+	  }
+  
+	  .betwo {
+		position: absolute;
+		font-size: 2.2rem;
+		margin-top: 11.5rem;
+		color: #000000;
+		font-style: normal;
+		font-family: 'Raleway';
+		margin-left: 1.3rem;
+	  }
+  
+	  .loremtwo {
+		position: absolute;
+		font-size: 1rem;
+		margin-top: 18rem;
+		color: #000000;
+		font-style: normal;
+		font-family: 'Raleway';
+		margin-left: 1.3rem;
+		margin-right: 1.3rem;
+	  }
+	}
+  
+	.tercero {
+	  position: absolute;
+	  height: 370px;
+	  left: 8%;
+	  right: 8%;
+	  background: #ffffff;
+	  border-radius: 5px;
+	  margin-top: 54rem;
+  
+	  .rectang {
+		box-sizing: border-box;
+		position: absolute;
+		left: 0%;
+		right: 0%;
+		margin-top: 16rem;
+		background: #55DFB4;
+		border: 1px solid #E8E9ED;
+		border-radius: 5px;
+		height: 170px;
+	  }
+  
+	  .incre {
+		position: absolute;
+		font-size: 2.2rem;
+		margin-top: 1.3rem;
+		color: #000000;
+		font-style: normal;
+		font-family: 'Raleway';
+		margin-left: 1.3rem;
+		margin-left: 1.3rem;
+		margin-right: 1.3rem;
+	  }
+  
+	  .loremtre {
+		position: absolute;
+		font-size: 1rem;
+		margin-top: 9.5rem;
+		color: #000000;
+		font-style: normal;
+		font-family: 'Raleway';
+		margin-left: 1.3rem;
+		margin-right: 1.3rem;
+	  }
+  
+	  .rectang .trumpe {
+		margin: auto;
+		height: auto;
+	  }
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container {
+	  height: 1130.66px;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .primero {
+	  margin-left: 9%;
+	  margin-right: 9%;
+	  height: 300px;
+	  margin-top: 5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .primero .circulor {
+	  margin-left: 75%;
+	  margin-top: 8rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .primero .be {
+	  position: absolute;
+	  margin-top: 4rem;
+	  margin-left: 2rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .primero .lorem {
+	  position: absolute;
+	  margin-top: 9rem;
+	  margin-right: 60%;
+	  margin-left: 2rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .segundo {
+	  margin-left: 9%;
+	  margin-right: 9%;
+	  height: 300px;
+	  margin-top: 26rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .segundo .circuloa {
+	  margin-left: 8%;
+	  margin-top: 4rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .segundo .betwo {
+	  position: absolute;
+	  margin-top: 4rem;
+	  margin-left: 50%;
+	  margin-right: 9rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .segundo .loremtwo {
+	  position: absolute;
+	  margin-top: 12rem;
+	  margin-left: 50%;
+	  margin-right: 3rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .tercero {
+	  margin-left: 9%;
+	  margin-right: 9%;
+	  margin-top: 47rem;
+	  height: 300px;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .tercero .rectang {
+	  border-radius: 0px;
+	  margin-left: 9%;
+	  margin-right: 0%;
+	  margin-top: 0rem;
+	  height: 300px;
+	  margin-left: 50%;
+	  font-weight: bold;
+	  border-left: 34px solid #ededed;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .tercero .incre {
+	  position: absolute;
+	  margin-top: 3rem;
+	  margin-left: 3rem;
+	  margin-right: 60%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .tercero .loremtre {
+	  position: absolute;
+	  margin-top: 12rem;
+	  margin-left: 3rem;
+	  margin-right: 55%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.container .tercero .rectang .trumpe {
+	  position: absolute;
+	  margin-top: 5rem;
+	  margin-left: 10%;
+	}
+  }
+  
+  .pricing {
+	display: flex;
+	justify-content: center;
+	font-size: 2.2rem;
+	margin-top: 4rem;
+	color: #000000;
+	font-style: normal;
+	font-family: 'Raleway';
+	text-align: center;
+  }
+  
+  .uno .recred {
+	box-sizing: border-box;
+	width: 76%;
+	margin-left: 12%;
+	margin-right: 12%;
+	margin-top: 1rem;
+	height: 245px;
+	background: #FFFFFF;
+	border: 1px solid #FB3B64;
+	border-radius: 18px;
+	border-radius: 18px;
+  
+	.basic {
+	  position: absolute;
+	  margin-top: 4rem;
+	  margin-left: 14%;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 20px;
+	  line-height: 24px;
+	}
+  
+	.zero {
+	  position: absolute;
+	  margin-top: 6rem;
+	  margin-left: 14%;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 300;
+	  font-size: 46px;
+	  line-height: 64px;
+	  color: #FB3B64;
+	}
+  
+	.text {
+	  position: absolute;
+	  margin-left: 45%;
+	  margin-right: 14%;
+	  margin-top: 2rem;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-size: 60%;
+	  line-height: 2rem;
+	}
+  
+	.a {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 2.7rem;
+	}
+  
+	.e {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 4.7rem;
+	}
+  
+	.i {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 6.7rem;
+	}
+  
+	.o {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 8.7rem;
+	}
+  
+	.u {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 10.7rem;
+	}
+  
+	.pink {
+	  width: 150px;
+	  margin: 0 auto;
+	  text-align: center;
+	  margin-top: 13.5rem;
+	  height: 50px;
+	  background: #EB476E;
+	  border-radius: 23px;
+	}
+  
+	.begin {
+	  margin: 0 auto;
+	  transform: translate(-50%, -50%);
+	  margin-top: -1.5rem;
+	  width: 37px;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 25px;
+	  line-height: 18px;
+	  color: #ffffff;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred {
+	  position: relative;
+	  width: 21%;
+	  margin-left: 10%;
+	  margin-top: 3rem;
+	  height: 350px;
+	  background: #FFFFFF;
+	  border: 1px solid #FB3B64;
+	  border-radius: 18px;
+	  border-radius: 18px;
+	  box-sizing: border-box;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .basic {
+	  margin-top: 1rem;
+	  margin-left: 40%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .zero {
+	  margin-top: 3rem;
+	  margin-left: 40%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .text {
+	  margin-top: 8rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .a {
+	  position: absolute;
+	  margin-left: 38%;
+	  margin-top: 8.5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .e {
+	  margin-left: 38%;
+	  margin-top: 10.5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .i {
+	  margin-left: 38%;
+	  margin-top: 12.5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .o {
+	  margin-left: 38%;
+	  margin-top: 14.5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .u {
+	  margin-left: 38%;
+	  margin-top: 16.5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.uno .recred .pink {
+	  margin-top: 20rem;
+	}
+  }
+  
+  .dos .recblue {
+	box-sizing: border-box;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 1rem;
+	height: 245px;
+	background: #FFFFFF;
+	border: 1px solid #07ACE6;
+	border-radius: 18px;
+	border-radius: 18px;
+	box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  
+	.professional {
+	  position: absolute;
+	  margin-top: 4rem;
+	  margin-left: 14%;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 20px;
+	  line-height: 24px;
+	}
+  
+	.zero {
+	  position: absolute;
+	  margin-top: 6rem;
+	  margin-left: 14%;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 300;
+	  font-size: 46px;
+	  line-height: 64px;
+	  color: #07ACE6;
+	}
+  
+	.limit {
+	  display: none;
+	}
+  
+	.texto {
+	  position: absolute;
+	  margin-left: 52%;
+	  margin-right: 14%;
+	  margin-top: 2rem;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-size: 60%;
+	  line-height: 2rem;
+	}
+  
+	.aa {
+	  position: absolute;
+	  margin-left: 47%;
+	  margin-top: 2.7rem;
+	}
+  
+	.ee {
+	  position: absolute;
+	  margin-left: 47%;
+	  margin-top: 4.7rem;
+	}
+  
+	.ii {
+	  position: absolute;
+	  margin-left: 47%;
+	  margin-top: 6.7rem;
+	}
+  
+	.oo {
+	  position: absolute;
+	  margin-left: 47%;
+	  margin-top: 8.7rem;
+	}
+  
+	.uu {
+	  position: absolute;
+	  margin-left: 47%;
+	  margin-top: 10.7rem;
+	}
+  
+	.bluea {
+	  width: 150px;
+	  margin: 0 auto;
+	  text-align: center;
+	  margin-top: 13.5rem;
+	  height: 50px;
+	  background: #07ACE6;
+	  border-radius: 23px;
+	}
+  
+	.begina {
+	  margin: 0 auto;
+	  transform: translate(-50%, -50%);
+	  margin-top: -1.5rem;
+	  width: 37px;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 25px;
+	  line-height: 18px;
+	  color: #ffffff;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue {
+	  position: absolute;
+	  width: 30%;
+	  margin-left: 36%;
+	  margin-top: 3rem;
+	  height: 400px;
+	  margin-top: -25rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .professional {
+	  margin-top: 1rem;
+	  margin-left: 37%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .zero {
+	  margin-top: 3rem;
+	  margin-left: 40%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .limit {
+	  display: flex;
+	  margin-top: 7.5rem;
+	  margin-left: 40%;
+	  font-size: 13px;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .texto {
+	  margin-left: 40%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .aa {
+	  margin-top: 2.5rem;
+	  margin-left: 35%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .ee {
+	  margin-top: 4.5rem;
+	  margin-left: 35%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .ii {
+	  margin-top: 6.5rem;
+	  margin-left: 35%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .oo {
+	  margin-top: 8.5rem;
+	  margin-left: 35%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .uu {
+	  margin-top: 10.5rem;
+	  margin-left: 35%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.dos .recblue .bluea {
+	  margin-top: 15rem;
+	}
+  }
+  
+  .tres .recblue {
+	box-sizing: border-box;
+	width: 76%;
+	margin-left: 12%;
+	margin-right: 12%;
+	margin-top: 2.5rem;
+	height: 245px;
+	background: #FFFFFF;
+	border: 1px solid #55DFB4;
+	border-radius: 18px;
+	border-radius: 18px;
+  
+	.professional {
+	  position: absolute;
+	  margin-top: 4rem;
+	  margin-left: 14%;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 20px;
+	  line-height: 24px;
+	}
+  
+	.zero {
+	  position: absolute;
+	  margin-top: 6rem;
+	  margin-left: 14%;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 300;
+	  font-size: 46px;
+	  line-height: 64px;
+	  color: #55DFB4;
+	}
+  
+	.texto {
+	  position: absolute;
+	  margin-left: 45%;
+	  margin-right: 14%;
+	  margin-top: 2rem;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-size: 60%;
+	  line-height: 2rem;
+	}
+  
+	.aa {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 2.7rem;
+	}
+  
+	.ee {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 4.7rem;
+	}
+  
+	.ii {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 6.7rem;
+	}
+  
+	.oo {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 8.7rem;
+	}
+  
+	.uu {
+	  position: absolute;
+	  margin-left: 40%;
+	  margin-top: 10.7rem;
+	}
+  
+	.bluea {
+	  width: 150px;
+	  margin: 0 auto;
+	  text-align: center;
+	  margin-top: 13.5rem;
+	  height: 50px;
+	  background: #55DFB4;
+	  border-radius: 23px;
+	}
+  
+	.begina {
+	  margin: 0 auto;
+	  transform: translate(-50%, -50%);
+	  margin-top: -1.5rem;
+	  width: 37px;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 25px;
+	  line-height: 18px;
+	  color: #ffffff;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue {
+	  position: absolute;
+	  width: 20%;
+	  margin-left: 72%;
+	  height: 350px;
+	  margin-top: -22.5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .professional {
+	  margin-top: 1rem;
+	  margin-left: 39%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .zero {
+	  margin-top: 3rem;
+	  margin-left: 37%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .texto {
+	  margin-top: 1rem;
+	  margin-left: 37%;
+	  margin-top: 8rem;
+	  margin-left: 45%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .aa {
+	  margin-top: 8.5rem;
+	  margin-left: 38%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .ee {
+	  margin-top: 10.5rem;
+	  margin-left: 38%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .ii {
+	  margin-top: 12.5rem;
+	  margin-left: 38%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .oo {
+	  margin-top: 14.5rem;
+	  margin-left: 38%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .uu {
+	  margin-top: 16.5rem;
+	  margin-left: 38%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.tres .recblue .bluea {
+	  margin-top: 20rem;
+	}
+  }
+  
+  .end {
+	margin-left: 10%;
+	margin-right: 10%;
+  
+	.contact .any {
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 55px;
+	  line-height: 47px;
+	  margin-top: 4rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end {
+	  margin-left: 10%;
+	  margin-top: 9rem;
+	  position: relative;
+	}
+  }
+  
+  div .contact .leave {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 22px;
+	margin-top: 2rem;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end div {
+	  display: inline;
+	}
+  }
+  
+  .end {
+	div {
+	  .sobre {
+		margin-top: 3rem;
+	  }
+  
+	  .info {
+		display: inline;
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 22px;
+		color: #A5A5A5;
+		margin-left: 1rem;
+	  }
+  
+	  .tlf {
+		margin-top: 1rem;
+	  }
+  
+	  div .num {
+		display: inline;
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 22px;
+		color: #A5A5A5;
+		margin-left: 1rem;
+	  }
+	}
+  
+	.formname {
+	  position: relative;
+  
+	  .inputname {
+		width: 100%;
+		height: 100%;
+		background: none;
+		margin: 0 auto;
+		margin-top: 10rem;
+		border: none;
+		outline: 0px;
+		margin-right: 10%;
+	  }
+  
+	  .lbl-nombre {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-right: 10%;
+		width: 80%;
+		height: 50%;
+		border-bottom: 1px solid #95989A;
+		pointer-events: none;
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 20px;
+		letter-spacing: 3.28px;
+		color: #08A6E4;
+	  }
+	}
+  
+	.formemail {
+	  position: relative;
+  
+	  .inputemail {
+		width: 100%;
+		height: 100%;
+		background: none;
+		margin: 0 auto;
+		margin-top: 10rem;
+		border: none;
+		outline: 0px;
+		margin-right: 10%;
+	  }
+  
+	  .lbl-email {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-right: 10%;
+		width: 80%;
+		height: 50%;
+		border-bottom: 1px solid #95989A;
+		pointer-events: none;
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 20px;
+		letter-spacing: 3.28px;
+		color: #08A6E4;
+	  }
+	}
+  
+	.accept {
+	  position: relative;
+  
+	  .yes {
+		position: absolute;
+		display: inline;
+		width: 30px;
+		height: 30px;
+		margin-top: 3.5rem;
+		border: 1px solid #95989A;
+		border-radius: 10px;
+	  }
+  
+	  .iaccept {
+		display: inline-flex;
+		margin-left: 3rem;
+		margin-top: 3.5rem;
+		font-size: 16px;
+		line-height: 20px;
+		color: #707070;
+	  }
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end div .tlf {
+	  position: absolute;
+	  margin-top: 3rem;
+	  margin-left: 1rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end div div .num {
+	  margin-top: 1rem;
+	  margin-left: 3rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .formname {
+	  margin-top: -15rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .formname .inputname {
+	  width: 40%;
+	  margin-top: 8rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .formname .lbl-nombre {
+	  width: 40%;
+	  margin-left: 65%;
+	  height: 8;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .foremail {
+	  margin-top: -15rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .foremail .inputemail {
+	  width: 40%;
+	  margin-top: 11rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .formemail .lbl-email {
+	  width: 40%;
+	  margin-left: 65%;
+	  height: 8;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .accept {
+	  margin-left: 65%;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.end .accept .iaccept {
+	  margin-left: 69%;
+	  margin-top: 2rem;
+	}
+  }
+  
+  .send {
+	position: absolute;
+	text-align: center;
+	margin-top: 3rem;
+	margin-left: 35%;
+	width: 226px;
+	height: 57px;
+	background: #08A6E4;
+	box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+	border-radius: 35px;
+  
+	.word {
+	  position: absolute;
+	  margin-left: 40%;
+	  width: 36px;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 700;
+	  font-size: 17px;
+	  line-height: 18px;
+	  color: #FFFFFF;
+	  margin-top: 1.5rem;
+	}
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	.send {
+	  margin-left: 75%;
+	}
+  }
+  
+  footer .footer {
+	position: relative;
+	display: inline-flex;
+	width: 100%;
+	height: 89px;
+	background: #F7F7F7;
+	box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+  
+	.oxishop {
+	  position: absolute;
+	  margin-top: 1.5rem;
+	  margin-left: 5%;
+	  height: 30px;
+	  font-family: 'Raleway';
+	  font-style: normal;
+	  font-size: 28px;
+	  line-height: 50px;
+	  color: #08A6E4;
+	}
+  
+	.footeroxi {
+	  display: inline-flex;
+	  height: 15px;
+	  margin-left: 5%;
+	  margin-top: 4.5rem;
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 400;
+	  font-size: 11px;
+	  line-height: 15px;
+	  color: #A5A5A5;
+	}
+  
+	.social {
+	  position: absolute;
+	  margin-top: 2.5rem;
+	  margin-left: 80%;
+	  width: 24px;
+	  height: 24px;
+	}
+  
+	.socialf {
+	  position: absolute;
+	  margin-top: 2.5rem;
+	  margin-left: 90%;
+	  width: 24px;
+	  height: 24px;
+	}
+  }
