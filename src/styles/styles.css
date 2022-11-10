@@ -1200,7 +1200,7 @@ div .contact .leave {
   margin-right: 10%;
   width: 80%;
   height: 50%;
-  border-bottom: 1px solid #95989A;
+  border-bottom: 1px solid #9a9595;
   pointer-events: none;
   font-family: "Open Sans";
   font-style: normal;
@@ -1291,16 +1291,13 @@ div .contact .leave {
     height: 8;
   }
 }
+
 @media only screen and (min-width: 1000px) {
-  .end .foremail {
-    margin-top: -15rem;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .end .foremail .inputemail {
+  .end .formemail .inputemail {
     width: 40%;
-    margin-top: 11rem;
+    margin-top: 13rem;
     margin-left: 65%;
+   
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -1346,7 +1343,7 @@ div .contact .leave {
 }
 
 .sendto .sendto{
-  position: absolute;
+    position: absolute;
   margin-left: -7rem;
   width: 226px;
   height: 57px;

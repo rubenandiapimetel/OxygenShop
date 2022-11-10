@@ -134,31 +134,31 @@
 					<p class="num">123 456 789</p>
 				</div>
 		</div>
-		<form id="formname" class="formname" action="">
-			<input class="inputname" type="text" required>
-			<label class="lbl-nombre">
+		<form id="formname" class="formname" method="post" action="send" novalidate>
+			<input  id = "inputname" class="inputname" type="text" required>
+			<label id="color_name" class="lbl-nombre">
 				<span class="txt-nomb">
 					NAME
 				</span>
 			</label>
 		</form>
-		<form class="formemail" action="">
-			<input class="inputemail" type="text" required>
-			<label class="lbl-email">
+		<form id="formname" class="formemail" action="">
+			<input id = "inputemail" class="inputemail" type="text" required>
+			<label id="color_email"  class="lbl-email">
 				<span class="txt-email">
 					EMAIL
 				</span>
 			</label>
 		</form>
 		<div class="accept">
-			<input class="yes" id ="yes" type="checkbox">
+			<input id="checkbox" class="yes" id ="yes" type="checkbox">
 			<label for = "yes" class="iaccept">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
 		</div>
 	</div>
 
 <div class="sendto">
 	<p class="word">Send</p>
-	<button class = "sendto" form = "formname"></button>
+	<button type="button" class = "sendto" form = "formname" formmethod="get" onclick="verifyname()"></button>
 </div>
 <br><br><br><br>
 <br><br><br><br>
@@ -175,7 +175,7 @@
 </footer>
 <span id="scrollclass" ></span>
 
-
+<script src = "src/js/forms.js	"></script>
 	<script src = "src/js/scroll.js"></script>
 	<style type="text/css" > @import 'src/styles/styles.css'; </style>
 </body>

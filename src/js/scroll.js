@@ -23,9 +23,11 @@ let on = () => {
 
 function retop(){
 	
-	document.documentElement.scrollTop = 0;
-	document.body.scrollTop = 0;
-
+	if (document.documentElement.scrollTop > 0){
+		let x = document.documentElement.scrollTop;
+		window.requestAnimationFrame(retop);
+		window.scrollTo(0, x - 100);
+	}
 }
 
 window.onscroll = on;
