@@ -1,5 +1,6 @@
 var veyfiname = () =>{
 	const name = document.getElementById('formname');
-	if(!name)
-	alert("nombre de uuario invalido")
+	console.log(name);
+	if(name < 2 || name > 100)
+	alert("nombre de uuario invalido");
 }

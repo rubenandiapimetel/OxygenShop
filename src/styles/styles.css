@@ -38,7 +38,7 @@ body {
   }
 }
 .navtoggle {
-  display: inline-flex;
+  display: inline;
   position: relative;
   width: 100%;
   font-size: 2rem;
@@ -50,6 +50,7 @@ body {
 }
 
 .nav .navtoggle .icon-menu {
+
   position: absolute;
   margin-left: 80%;
   width: 20px;
@@ -128,21 +129,25 @@ body {
     display: none;
   }
 }
+
 #checkboxnav:checked ~ .navtoggle .icon-menu {
   display: none;
 }
 
+
 .checkboxnav:checked ~ .navtoggle .icon-cross {
-  display: inline;
+  display:inline;
+}
+
+
+@media only screen and (min-width: 1000px) {
+  #checkboxnav:checked ~ .navtoggle .icon-menu {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .navtoggle .icon-menu {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #checkboxnav:checked ~ .navtoggle .icon-menu {
     display: none;
   }
 }
@@ -1276,6 +1281,7 @@ div .contact .leave {
   .end .formname .inputname {
     width: 40%;
     margin-top: 8rem;
+    margin-left: 65%;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -1294,6 +1300,7 @@ div .contact .leave {
   .end .foremail .inputemail {
     width: 40%;
     margin-top: 11rem;
+    margin-left: 65%;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -1336,6 +1343,17 @@ div .contact .leave {
   line-height: 18px;
   color: #FFFFFF;
   margin-top: 1.5rem;
+}
+
+.sendto{
+    position: absolute;
+  margin-left: -7rem;
+  width: 226px;
+  height: 57px;
+  background: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 35px;
+  opacity: 0;
 }
 
 @media only screen and (min-width: 1000px) {
