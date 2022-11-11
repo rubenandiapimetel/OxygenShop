@@ -6,6 +6,10 @@ let scrollf = () => {
 	let actual_margin = height - current_margin;
 	let current_pos = Math.round((document.documentElement.scrollTop * 1000)/ actual_margin);
 	console.log(current_pos);
+	if((height - (document.documentElement.scrollTop)) < ((height/4) )) {	//25percentofpage
+		modal();
+	}
+	console
 	console.log(Math.round(document.documentElement.scrollTop));
 	scrollclass.style.background = `linear-gradient(90deg, #000000 ${current_pos / 10}%, #d7d7d7 0%)`;
 };
