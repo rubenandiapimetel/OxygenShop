@@ -7,7 +7,7 @@ let scrollf = () => {
 	let current_pos = Math.round((document.documentElement.scrollTop * 1000)/ actual_margin);
 	console.log(current_pos);
 	console.log(Math.round(document.documentElement.scrollTop));
-	scrollclass.style.background = `linear-gradient(90deg, #ff2c03 ${current_pos / 10}%, #d7d7d7 0%)`;
+	scrollclass.style.background = `linear-gradient(90deg, #000000 ${current_pos / 10}%, #d7d7d7 0%)`;
 };
 
 let on = () => {

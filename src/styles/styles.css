@@ -189,9 +189,9 @@ body {
   width: 300px;
   height: 60px;
   background: #08A6E4;
-  box-shadow: 5px 10px 14px rgba(255, 255, 255, 0.516);
+  box-shadow: 5px 10px 14px rgba(255, 255, 255, 0.29);
   border-radius: 40px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .image {
@@ -201,7 +201,8 @@ body {
 .imagen {
   width: 100%;
   height: 100%;
-
+  left: 0px;
+  top: 0px;
 }
 
 .benefits {
@@ -1199,7 +1200,7 @@ div .contact .leave {
   left: 0;
   margin-right: 10%;
   width: 80%;
-  height: 50%;
+  height: 7rem;
   border-bottom: 1px solid #9a9595;
   pointer-events: none;
   font-family: "Open Sans";
@@ -1228,7 +1229,7 @@ div .contact .leave {
   left: 0;
   margin-right: 10%;
   width: 80%;
-  height: 50%;
+  height: 7rem;
   border-bottom: 1px solid #95989A;
   pointer-events: none;
   font-family: "Open Sans";
@@ -1257,6 +1258,16 @@ div .contact .leave {
   font-size: 16px;
   line-height: 20px;
   color: #707070;
+}
+
+.end .accept #color_checkbox{
+  position: absolute;
+  border-bottom: 2px solid #bc0000;
+  width: 30px;
+  margin-left: -100%;
+  margin-top: 4.5rem;
+  display: none;
+  
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1353,7 +1364,6 @@ div .contact .leave {
   opacity: 0;
   margin-top: 0;
 }
-
 @media only screen and (min-width: 1000px) {
   .sendto {
     margin-left: 70%;
@@ -1364,6 +1374,7 @@ div .contact .leave {
    margin-top: 0rem;
   }
 }
+
 footer .footer {
   position: relative;
   display: inline-flex;
@@ -1408,7 +1419,7 @@ footer .footer .socialf {
   margin-left: 90%;
   width: 24px;
   height: 24px;
-}/*# sourceMappingURL=styles.css.map */
+}
 
 footer .footer #return {
   position: fixed;
