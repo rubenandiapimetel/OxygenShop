@@ -1,3 +1,4 @@
+let popup_on = false;
 
 let scrollf = () => {
 	let scrollclass = document.getElementById('scrollclass');
@@ -5,13 +6,19 @@ let scrollf = () => {
 	let current_margin = document.documentElement.clientHeight;
 	let actual_margin = height - current_margin;
 	let current_pos = Math.round((document.documentElement.scrollTop * 1000)/ actual_margin);
-	console.log(current_pos);
-	if((height - (document.documentElement.scrollTop)) < ((height/4) )) {	//25percentofpage
-		modal();
-	}
-	console
+	console.log("current pos" + current_pos);
+	console.log("srcolltop " + document.documentElement.scrollTop);
+	console.log("heigth " + height);
+	console.log("current margin" + current_margin);
 	console.log(Math.round(document.documentElement.scrollTop));
 	scrollclass.style.background = `linear-gradient(90deg, #000000 ${current_pos / 10}%, #d7d7d7 0%)`;
+	if((height * 0.25) < (current_margin + document.documentElement.scrollTop)) {	
+		if(popup_on == false){//25percentofpage
+		modal();
+		popup_on = true;
+		}
+	}
+	doit();
 };
 
 let on = () => {
@@ -35,3 +42,4 @@ function retop(){
 }
 
 window.onscroll = on;
+

@@ -26,8 +26,7 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  left: 0px;
-  top: 0px;
+
   background: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
 }
@@ -52,14 +51,14 @@ body {
 .nav .navtoggle .icon-menu {
 
   position: absolute;
-  margin-left: 80%;
+  margin-left: 50%;
   width: 20px;
   height: 20px;
   margin-top: 0.7rem;
 }
 .nav .navtoggle .icon-cross {
   position: absolute;
-  margin-left: 80%;
+  margin-left: 50%;
   width: 20px;
   height: 20px;
   margin-top: 0.8rem;
@@ -101,7 +100,7 @@ body {
     display: inline-flex;
     align-items:baseline;
     flex-direction: row;
-    padding-left: 45%;
+    padding-left: 40%;
     gap: 8rem;
   }
 }
@@ -189,8 +188,9 @@ body {
   width: 300px;
   height: 60px;
   background: #08A6E4;
-  box-shadow: 5px 10px 14px rgba(255, 255, 255, 0.29);
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 40px;
+  border: none;
   color: #FFFFFF;
 }
 
@@ -1345,6 +1345,7 @@ div .contact .leave {
   background: #08A6E4;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 35px;
+  margin: 50px;
 }
 .sendto .word {
   position: absolute;
@@ -1388,6 +1389,7 @@ footer .footer {
   height: 89px;
   background: #F7F7F7;
   box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+  margin-top: 150px;
 }
 footer .footer .oxishop {
   position: absolute;
@@ -1419,12 +1421,29 @@ footer .footer .social {
   width: 24px;
   height: 24px;
 }
+
+@media only screen and (min-width: 1000px) {
+  footer .footer .social {
+    margin-left: 90%;
+
+    margin-right: 10%;
+  }
+
+}
+
 footer .footer .socialf {
   position: absolute;
   margin-top: 2.5rem;
   margin-left: 90%;
   width: 24px;
   height: 24px;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer .footer .socialf {
+    margin-left: 95%;
+    margin-right: 5%;
+  }
 }
 
 footer .footer #returnbu {
@@ -1435,7 +1454,7 @@ footer .footer #returnbu {
   height: 0; 
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  background-color:rgba(255, 255, 255, 0.1);
+  background-color:rgba(255, 255, 255, 0.01);
   border-bottom: 20px solid #000000; 
 }
 
@@ -1451,3 +1470,8 @@ footer .footer #return {
   border-bottom: 20px solid #000000; 
   opacity: 0;
 }
+
+#popup::backdrop{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+

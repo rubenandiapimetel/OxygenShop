@@ -5,7 +5,24 @@ const modal = () =>{
 		closep.addEventListener("click", () => {
 			openp.close();
 		});
+		popup_on = true;
 }
 
-window.onload = waitter;
+const comprobacion = ()=>{
+	let height = document.documentElement.scrollHeight;
+	current_margin = document.documentElement.clientHeight;
+	if (popup_on == false && ((height * 0.25) > (current_margin + document.documentElement.scrollTop))){
+		modal();
+	}
+}
+
+
+
+const doit = ()=>{
+	let height = document.documentElement.scrollHeight;
+	current_margin = document.documentElement.clientHeight;
+	if (popup_on == false && ((height * 0.25) > (current_margin + document.documentElement.scrollTop))){
+	window.setTimeout('comprobacion()',5000);
+	}
+}
 //ta sin temrinarrr
