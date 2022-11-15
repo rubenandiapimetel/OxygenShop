@@ -4,9 +4,10 @@ const modal = () =>{
 		openp.showModal();
 		closep.addEventListener("click", () => {
 			openp.close();
+			localStorage.setItem("session","on");
 		});
-		saveStorage();
 		popup_on = true;
+		
 }
 
 const comprobacion = ()=>{

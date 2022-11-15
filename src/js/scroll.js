@@ -1,5 +1,5 @@
 let popup_on = false;
-if(localStorage.getItem("session") != ""){
+if(localStorage.getItem("session") != null){
 	let saved = localStorage.getItem("session");
 	console.log(saved + " = Sesion guardada");
 	/* localStorage.removeItem('session'); */

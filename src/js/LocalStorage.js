@@ -1,6 +1,6 @@
-const saveStorage = ()=>{
-	localStorage.setItem("session","on");
-}
+
+/* localStorage.clear();
+ */
 
 const currencySelected = ()=>{
 	let currency = document.getElementById("currency").value || 0;
