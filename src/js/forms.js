@@ -1,6 +1,7 @@
 let x = false;
 let z = false;
 let y =false;
+let d = false; //popup
 var verifyname = () =>{
 	const name = document.getElementById('inputname').value;
 	let color = document.getElementById('color_name');
@@ -59,5 +60,36 @@ var verifycheck = () =>{
 	if(x == true && y == true && z == true){
 		fetchPost();
 	}
+}
+
+/* verify just popup email */
+
+var verify_only_mail = () =>{
+
+	let email = document.getElementById("inputpopup").value;
+	let color = document.getElementById('color_popup');
+	console.log(email);
+	for(var i=0; i< email.length ; i++){
+		c = email.charAt(i);
+		if(c == "@"){
+			i++;
+			for(var k = i; k< email.length ; k++){
+				if(email.charAt(k) == "."){
+					k++;
+					if(email.charAt(++k)){
+						var confi = true;
+					color.style.borderBottom = 	"2px solid #008000";
+					d = true;
+					break;
+					}
+				}
+			}
+		}
+	}
+	if(!confi){
+		color.style.borderBottom = 	"2px solid #bc0000";
+		d = false;
+	}
+	fetchPost();
 }
 	

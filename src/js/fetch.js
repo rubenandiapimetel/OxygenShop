@@ -1,10 +1,16 @@
 let fetchPost = () =>{
 	let name = document.getElementById('inputname').value;
 	let email = document.getElementById('inputemail').value;
+	let popup_email =  document.getElementById('inputpopup').value;
+	console.log(popup_email)
 	let data = new Object();
-	data.name ="name";
-	data.email = "email";
-	console.log(data); //datos enviados
+	if(popup_email != "")
+	data.popup_email = popup_email;
+	if( name != "")
+	data.name =name;
+	if ( email != "")
+	data.email = email;
+	console.log(data.popup_email); //datos enviados
 	fetch('https://jsonplaceholder.typicode.com/posts', {
 	method: 'POST',
 	body: JSON.stringify(data),

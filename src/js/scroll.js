@@ -1,4 +1,12 @@
 let popup_on = false;
+if(localStorage.getItem("session") != ""){
+	let saved = localStorage.getItem("session");
+	console.log(saved + " = Sesion guardada");
+	/* localStorage.removeItem('session'); */
+	/* saved = localStorage.getItem("session");
+	console.log(saved); */
+	popup_on = true;
+}
 
 let scrollf = () => {
 	let scrollclass = document.getElementById('scrollclass');

@@ -9,12 +9,7 @@
 	<title>OxygenShop</title>
 </head>
 <body>
-		<dialog id="popup" data-backdrop="true">
-			<p>Subscribe to our Newsletter</p>
-		  
-			<button id="closepopup" type="button" aria-hidden="true">X</button>
-		  
-		  </dialog>
+
 		<nav class = "nav">
 			<input type="checkbox" id = "checkboxnav" class="checkboxnav">
 			<label for ="checkboxnav" class = "navtoggle">OXYGEN Shop<img class="icon-menu" src="src/images/Menu.png">
@@ -26,6 +21,11 @@
 				<li><a href="#prices">PRICES</a></li>
 				<li><a href="#contact">CONTACT</a></li>
 			</ul>
+			<select name="currency" id="currency" oninput="currencySelected()">
+				<option value="usd">USD</option>
+				<option value="eur">EUR</option>
+				<option value="gbp">GBP</option>
+			</select>
 		</nav>
 		<main>	
 		<div class = "sell">
@@ -83,7 +83,7 @@
 	<div class="uno">
 		<div class="recred">
 			<p class="basic">Basic</p>
-			<p class="zero">$0</p>
+			<p id="basic" class="zero">$0</p>
 			<p class="text">100 MB HDD<br>1 Subdomain<br>2 E-mails<br>Two Years License<br>Full Suport
 			</p>
 			<img class="a" src="src/images/Checkbox.png">
@@ -99,7 +99,7 @@
 	<div class="dos">
 		<div class="recblue">
 			<p class="professional">Professional</p>
-			<p class="zero">$25</p>
+			<p id="professional" class="zero">$25</p>
 			<p class="limit">Limited offer</p>
 			<p class="texto">500 MB HDD<br>2 Subdomain<br>5 E-mails<br>Open Years License<br>Full Suport
 			</p>
@@ -115,7 +115,7 @@
 	<div class="tres">
 		<div class="recblue">
 			<p class="professional">Premiun</p>
-			<p class="zero">$60</p>
+			<p id="premiun" class="zero">$60</p>
 			<p class="texto">500 MB HDD<br>2 Subdomain<br>5 E-mails<br>Open Years License<br>Full Suport
 			</p>
 			<img class="aa" src="src/images/Checkbox.png">
@@ -181,7 +181,21 @@
 		<button id ="return" onclick="retop()"></button>
 	</div>
 </footer>
+<dialog id="popup" data-backdrop="true">
+	<form id="formnamep" class="formemail" action="">
+		<input id = "inputpopup" class="inputemail" type="text">
+		<label id="color_popup"  class="lbl-email">
+		<span class="txt-email">
+			SUBSCRIBE TO OUR NEWSLETTER <BR>EMAIL
+		</span>
+		</label>
+		<button type="button" class = "sendto_popup" form = "formnamep" formmethod="get" onclick="verify_only_mail()">SEND
+		</button>
+	</form>
+		<button id="closepopup" type="button" >X</button>
+</dialog>
 <span id="scrollclass" ></span>
+<script src="src/js/LocalStorage.js"></script>
 	<script src = "src/js/popup.js	"></script>
 	<script src = "src/js/scroll.js"></script>
 	<script src = "src/js/fetch.js"></script>

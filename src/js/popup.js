@@ -5,6 +5,7 @@ const modal = () =>{
 		closep.addEventListener("click", () => {
 			openp.close();
 		});
+		saveStorage();
 		popup_on = true;
 }
 
@@ -25,4 +26,3 @@ const doit = ()=>{
 	window.setTimeout('comprobacion()',5000);
 	}
 }
-//ta sin temrinarrr
