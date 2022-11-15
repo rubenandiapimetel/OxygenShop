@@ -1565,3 +1565,11 @@ border-radius: 20%;
 text-align: center;
 border-color: #08a6e4;
 }
+
+@media only screen and (min-width: 1000px) {
+  .nav   #currency{
+    margin-left: 23rem;
+    height: 40px;
+    width: 53px;
+  }
+}
