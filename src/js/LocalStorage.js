@@ -15,12 +15,12 @@ const currencySelected = ()=>{
 
 function cambiarValor(data){
 	let currency = document.getElementById("currency").value || 0;
-	if(currency = 'eur')
-	currency = '€';
-	if(currency = 'usd')
-	currency = '$'
-	if(currency = 'gbp')
-	currency = '£'
+	if(currency == 'eur')
+	currency = "€";
+	if(currency == 'usd')
+	currency = "$";
+	if(currency == 'gbp')
+	currency = "£";
 	console.log(data);
 	document.getElementById("basic").innerHTML =currency +(Math.round(0*(data.usd)));
 	document.getElementById("professional").innerHTML =currency+ (Math.round(20*(data.usd)));
