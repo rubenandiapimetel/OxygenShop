@@ -47,13 +47,17 @@ var verifyemail = () =>{
 var verifycheck = () =>{
 	let checkbox_color = document.getElementById("color_checkbox");
 	let checkbox = document.getElementById("checkbox");
+	let colortext = document.getElementById("iaccept");
 	if ((checkbox.checked) == false){
 		checkbox_color.style.display = "inline";
+		colortext.style.color = "#bc0000";
+
 		console.log(checkbox.checked);
 		z = false;
 	}
 	else{
 	checkbox_color.style.display = "none";
+	colortext.style.color = "#707070";
 	z = true;
 	}
 	console.log(x,y,z); //checking if exist the 3 param
