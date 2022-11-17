@@ -980,6 +980,9 @@ body {
 		margin-top: 15rem;
 	}
 }
+.tres{
+	margin-bottom: 3rem;
+}
 .tres .recblue {
 	box-sizing: border-box;
 	width: 76%;
@@ -1557,29 +1560,35 @@ footer .footer #return {
 	 border-color: #000000;
  }
 
-.nav   #currency{
-	top: 0.3rem;
+ #currency{
 display: inline;
 	position: absolute;
-	margin-left: 19rem;
-	height: 33px;
+	margin-left: 10%;
+	justify-content: center;
+	height: 40px;
 	width: 60px;
 font-family: 'Poppins';
 font-style: normal;
-font-weight: 400;
-font-size: 14px;
+
+font-size: 18px;
 line-height: 21px;
 background-color: #ffffff;
 
 text-align: center;
-border:3px solid #08A6E4;
-border-bottom: #E8E9ED;
-border-top: #E8E9ED;
+border:1px solid #9c9400;
+border-radius: 20%;
+margin-top: 1rem;
+font-family: Raleway;
 }
 
-@media only screen and (min-width: 1000px) {
-	.nav   #currency{
-		margin-left: 23rem;
+#currency {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+@media only screen and (min-width: 1000p	x) {
+ #currency{
+		margin-left: 10%;
 		height: 41px;
 		width: 60px;
 	}
